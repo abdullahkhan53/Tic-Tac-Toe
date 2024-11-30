@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+ul{
+    list-style-type: none;
+}
+nav{
+    background-color: black;
+    height: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    display: flex;
+    padding-inline: 20px;
+    align-items: center;
+    font-size: 30px;
+}
+.game{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-inline: 20px;
+    gap: 50px;  
+}
+.boxes{
+    width: 310px;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer;
+    font-size: 3rem;
+}
+.box:hover{
+    background-color:rgb(247 243 243 / 69%);
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.gameInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+.gameInfo h2{
+    font-family: "Roboto", sans-serif;
+}
+#gif{
+    width: 0px;
+    background-color: white;
+    transition: width 1s ease-in;
+}
+#reset{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding-block: 4px;
+    border-radius: 10px;
+}
+#restart{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding-block: 4px;
+    border-radius: 10px;
+}
+.afterGameWin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: 300px;
+    padding-inline: 200px;
+    text-align: center;
+    gap: 20px;
+    display: none;
+    transition: display 1s ease;
+}
+.winnerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 600px) {
+    .game{
+        flex-direction: column;
+        justify-content: center;
+        margin-inline: auto;
+        align-items: center;
+    } 
+    .afterGameWin{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-inline: 10px;
+        padding-inline: 10px;
+        text-align: center;
+        gap: 20px;
+        display: none;
+        transition: display 1s ease;
+    }
+}
